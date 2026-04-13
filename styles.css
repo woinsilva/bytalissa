@@ -263,12 +263,24 @@ button {
 
 .service-card {
   background: var(--bg-soft);
+  overflow: hidden;
+  transition: box-shadow 260ms ease-out, transform 260ms ease-out;
 }
 
 .service-card img {
   width: 100%;
   aspect-ratio: 381 / 235;
   object-fit: cover;
+  transition: transform 260ms ease-out;
+  transform-origin: center;
+}
+
+.service-card:hover {
+  box-shadow: 0 14px 28px rgba(16, 24, 40, 0.08);
+}
+
+.service-card:hover img {
+  transform: scale(1.04);
 }
 
 .service-copy {
@@ -427,11 +439,22 @@ button {
   justify-content: center;
 }
 
+.gallery-item {
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
 .gallery-grid img {
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  box-shadow: var(--shadow);
+  display: block;
+  transition: transform 260ms ease-out;
+  transform-origin: center;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
 }
 
 .instagram-note {
@@ -524,6 +547,10 @@ button {
   padding: 64px 0;
 }
 
+.lash-section {
+  padding-top: 8px;
+}
+
 .detail-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -572,6 +599,10 @@ button {
   font-size: 16px;
   font-weight: 300;
   line-height: 1.65;
+}
+
+.detail-intro-secondary {
+  margin-top: 16px;
 }
 
 .detail-pills {
@@ -644,8 +675,46 @@ button {
 }
 
 .lash-section .detail-grid {
-  align-items: end;
-  margin-bottom: 48px;
+  width: min(100%, 1120px);
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: 576px 432px;
+  gap: 56px;
+  align-items: start;
+  margin-bottom: 32px;
+}
+
+.lash-section .detail-media {
+  width: 576px;
+}
+
+.lash-section .detail-media img {
+  aspect-ratio: 576 / 548;
+  object-position: center;
+}
+
+.lash-section .detail-copy {
+  display: flex;
+  flex-direction: column;
+  width: 432px;
+  max-width: 432px;
+  padding-top: 80px;
+}
+
+.lash-section .detail-copy h2 {
+  margin-bottom: 54px;
+}
+
+.lash-section .detail-copy .detail-intro {
+  max-width: 432px;
+}
+
+.lash-section .detail-copy .detail-intro + .detail-intro {
+  margin-top: 42px;
+}
+
+.lash-section .detail-copy .detail-action {
+  margin-top: 56px;
 }
 
 .lash-pricing {
@@ -843,6 +912,17 @@ button {
   .detail-grid {
     gap: 48px;
   }
+
+  .lash-section .detail-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .lash-section .detail-media,
+  .lash-section .detail-copy {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 800px) {
@@ -906,6 +986,22 @@ button {
 
   .detail-pills {
     grid-template-columns: 1fr;
+  }
+
+  .lash-section .detail-copy {
+    padding-top: 0;
+  }
+
+  .lash-section .detail-copy h2 {
+    margin-bottom: 32px;
+  }
+
+  .lash-section .detail-copy .detail-intro + .detail-intro {
+    margin-top: 24px;
+  }
+
+  .lash-section .detail-copy .detail-action {
+    margin-top: 32px;
   }
 
   .page-hero-inner p,
