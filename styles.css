@@ -584,22 +584,22 @@ button {
 }
 
 .detail-pills li {
-  position: relative;
-  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 16px;
   line-height: 1.2;
   min-width: 0;
 }
 
-.detail-pills li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 6px;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--accent-soft);
+.detail-pills li img {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+}
+
+.detail-pills li span {
+  min-width: 0;
 }
 
 .price-block {
@@ -729,6 +729,23 @@ button {
   line-height: 1.625;
 }
 
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-contact-item img {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  margin-top: 3px;
+}
+
+.footer-contact-item span {
+  display: block;
+}
+
 .footer-logo {
   width: 159px;
   margin-bottom: 32px;
@@ -752,10 +769,17 @@ button {
 
 .socials a {
   color: var(--accent);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.socials img {
+  width: 20px;
+  height: 20px;
+  display: block;
 }
 
 .whatsapp-float {
