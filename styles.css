@@ -543,6 +543,16 @@ button {
   background: #fff;
 }
 
+.services-page .page-hero-inner,
+.services-page .detail-grid,
+.services-page .lash-pricing,
+.services-page .service-cta-inner {
+  width: 100%;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .service-detail {
   padding: 64px 0;
 }
@@ -675,28 +685,26 @@ button {
 }
 
 .lash-section .detail-grid {
-  width: min(100%, 1120px);
-  margin-left: auto;
-  margin-right: auto;
-  grid-template-columns: 576px 432px;
-  gap: 56px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
   align-items: start;
   margin-bottom: 32px;
 }
 
 .lash-section .detail-media {
-  width: 576px;
+  width: 100%;
 }
 
 .lash-section .detail-media img {
-  aspect-ratio: 576 / 548;
+  width: 100%;
+  aspect-ratio: 544 / 548;
   object-position: center;
 }
 
 .lash-section .detail-copy {
   display: flex;
   flex-direction: column;
-  width: 432px;
+  width: 100%;
   max-width: 432px;
   padding-top: 80px;
 }
@@ -724,7 +732,7 @@ button {
 }
 
 .pricing-card {
-  background: #f8f5f2;
+  background: rgba(248, 245, 242, 0.45);
   padding: 32px;
   min-width: 0;
 }
