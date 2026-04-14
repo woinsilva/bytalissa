@@ -744,10 +744,40 @@ button {
   margin-top: 56px;
 }
 
+.lip-section {
+  padding-top: 40px;
+}
+
+.lip-section .detail-grid {
+  align-items: center;
+}
+
+.lip-section .detail-copy {
+  max-width: 616px;
+}
+
+.lip-section .detail-copy h2 {
+  margin-bottom: 32px;
+}
+
+.lip-section .detail-copy .detail-intro {
+  max-width: 616px;
+}
+
+.lip-section .price-block {
+  max-width: 616px;
+  margin-top: 56px;
+  margin-bottom: 40px;
+}
+
+.lip-section .detail-media img {
+  aspect-ratio: 618 / 617;
+}
+
 .lash-pricing {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 32px;
+  gap: 96px;
 }
 
 .pricing-card {
