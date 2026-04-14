@@ -724,7 +724,7 @@ button {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 432px;
+  max-width: 100%;
   padding-top: 0;
 }
 
@@ -733,7 +733,7 @@ button {
 }
 
 .lash-section .detail-copy .detail-intro {
-  max-width: 432px;
+  max-width: 100%;
 }
 
 .lash-section .detail-copy .detail-intro + .detail-intro {
