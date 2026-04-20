@@ -328,7 +328,7 @@ button {
 }
 
 .about {
-  background: linear-gradient(to bottom, #fff 0%, #fff 12%, var(--bg-soft) 12%, var(--bg-soft) 100%);
+  background: var(--bg);
 }
 
 .about-grid {
