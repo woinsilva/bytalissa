@@ -816,6 +816,17 @@ button {
   text-align: right;
 }
 
+.pricing-card.bordered .price-row {
+  border-bottom: 0;
+  padding-bottom: 4px;
+}
+
+.pricing-card.bordered .maintenance-note {
+  margin-top: 0;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--text-body);
+}
+
 .pricing-removal {
   margin-top: 20px;
   font-size: 16px;
